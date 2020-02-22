@@ -146,6 +146,12 @@
             <li><a href="javascript:;"><img src="images/c14.jpg" alt=""><span>生日快乐！</span></a></li>
             <li><a href="javascript:;"><img src="images/c15.jpg" alt=""><span>😀</span></a></li>
             <li><a href="javascript:;"><img src="images/c16.jpg" alt=""><span>LOVE</span></a></li>
+            <li><a href="javascript:;"><img src="images/c17.jpg" alt=""><span>😕</span></a></li>
+            <li><a href="javascript:;"><img src="images/c18.jpg" alt=""><span>生日快乐</span></a></li>
+            <li><a href="javascript:;"><img src="images/c19.jpg" alt=""><span> hi hi</span></a></li>
+            <li><a href="javascript:;"><img src="images/c20.jpg" alt=""><span>😗😘</span></a></li>
+            <li><a href="javascript:;"><img src="images/c21.jpg" alt=""><span>生日快乐</span></a></li>
+            <li><a href="javascript:;"><img src="images/c22.jpg" alt=""><span>汪汪汪</span></a></li>
         </ul>
     </div>
 
@@ -186,7 +192,7 @@
                     function Tmove(){
                         //运动是移动left  从0到-s;（个人习惯往左滚）
                         left -= v;
-                        if(left <= -s){left = 0;$Box_ul.css("left",left)}else{ $Box_ul.css("left",left) }
+                        if(left &lt;= -s){left = 0;$Box_ul.css("left",left)}else{ $Box_ul.css("left",left) }
                         timer = requestAnimationFrame(Tmove);
                     }
                     $Box_ul.hover(function(){cancelAnimationFrame(timer)},function(){Tmove()})
