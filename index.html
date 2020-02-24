@@ -193,7 +193,7 @@
                     function Tmove(){
                         //运动是移动left  从0到-s;（个人习惯往左滚）
                         left -= v;
-                        if(left &lt;= -s){left = 0;$Box_ul.css("left",left)}else{ $Box_ul.css("left",left) }
+                        if(left <= -s){left = 0;$Box_ul.css("left",left)}else{ $Box_ul.css("left",left) }
                         timer = requestAnimationFrame(Tmove);
                     }
                     $Box_ul.hover(function(){cancelAnimationFrame(timer)},function(){Tmove()})
