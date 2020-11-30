@@ -16,7 +16,7 @@ import javax.annotation.Resource;
 public class AnnuallyTask {
     @Resource
     JavaMailSenderImpl sender;
-    @Scheduled(cron = "0/2 * * * * MON-SAT")
+    @Scheduled(cron = "0/10 * * * * MON-SAT")
     void contextLoads() {
         SimpleMailMessage message = new SimpleMailMessage();
         message.setSubject("开会");
