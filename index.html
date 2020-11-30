@@ -16,32 +16,131 @@
     <script src="https://cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget/autoload.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
 
-    <style >
+    <style>
         <!--
         .STYLE1 {
             color: #666666
         }
         -->
-        *{margin:0;padding:0;}
-        li{list-style:none;}
-        body{
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        body {
             background-color: #FFDEAD;
         }
-        .one{margin:50px auto;height:160px;width:1000px;overflow:hidden;position:relative; }
-        .one ul{height:160px;width:100000px;position:absolute;left:0;} /*ul width的宽不能过小*/
-        .one ul li{display:block;float:left;margin:5px;height:150px;border-radius:5px;position:relative;}
-        .one ul li a{display:inline-block;height:150px;}
-        .one ul li img{border-radius:5px;display:block;}
-        .one ul li a span{height:0;display:block;background:rgba(0,0,0,0.4);position:absolute;bottom:0;color:#fff;font-size:0px;}
-        .one ul li a:hover span{height:150px;line-height:150px;font-size:20px;text-align:center;transition:all 0.7s;}
 
-        .two{margin:50px auto;height:90px;width:1000px;overflow:hidden;position:relative; }
-        .two ul{height:90px;width:100000px;position:absolute;left:0;}/*ul width的宽不能过小*/
-        .two ul li{display:block;float:left;margin:5px;height:80px;border-radius:5px;position:relative;}
-        .two ul li a{display:inline-block;height:80px;}
-        .two ul li img{display:block;border-radius:5px;height:80px;}
-        .two ul li a span{height:0;display:block;background:rgba(0,0,0,0.4);position:absolute;bottom:0;color:#fff;font-size:0px;}
-        .two ul li a:hover span{height:80px;line-height:80px;font-size:20px;text-align:center;transition:all 0.7s;}
+        .one {
+            margin: 50px auto;
+            height: 160px;
+            width: 1000px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .one ul {
+            height: 160px;
+            width: 100000px;
+            position: absolute;
+            left: 0;
+        }
+
+        /*ul width的宽不能过小*/
+        .one ul li {
+            display: block;
+            float: left;
+            margin: 5px;
+            height: 150px;
+            border-radius: 5px;
+            position: relative;
+        }
+
+        .one ul li a {
+            display: inline-block;
+            height: 150px;
+        }
+
+        .one ul li img {
+            border-radius: 5px;
+            display: block;
+        }
+
+        .one ul li a span {
+            height: 0;
+            display: block;
+            background: rgba(0, 0, 0, 0.4);
+            position: absolute;
+            bottom: 0;
+            color: #fff;
+            font-size: 0px;
+        }
+
+        .one ul li a:hover span {
+            height: 150px;
+            line-height: 150px;
+            font-size: 20px;
+            text-align: center;
+            transition: all 0.7s;
+        }
+
+        .two {
+            margin: 50px auto;
+            height: 90px;
+            width: 1000px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .two ul {
+            height: 90px;
+            width: 100000px;
+            position: absolute;
+            left: 0;
+        }
+
+        /*ul width的宽不能过小*/
+        .two ul li {
+            display: block;
+            float: left;
+            margin: 5px;
+            height: 80px;
+            border-radius: 5px;
+            position: relative;
+        }
+
+        .two ul li a {
+            display: inline-block;
+            height: 80px;
+        }
+
+        .two ul li img {
+            display: block;
+            border-radius: 5px;
+            height: 80px;
+        }
+
+        .two ul li a span {
+            height: 0;
+            display: block;
+            background: rgba(0, 0, 0, 0.4);
+            position: absolute;
+            bottom: 0;
+            color: #fff;
+            font-size: 0px;
+        }
+
+        .two ul li a:hover span {
+            height: 80px;
+            line-height: 80px;
+            font-size: 20px;
+            text-align: center;
+            transition: all 0.7s;
+        }
 
 
     </style>
@@ -50,348 +149,361 @@
 <body>
 
 
-    <script src="/demos/googlegg.js"></script>
-    <canvas id="c" width="300" height="150"></canvas>
+<script src="/demos/googlegg.js"></script>
+<canvas id="c" width="300" height="150"></canvas>
 <!--    <script type="text/javascript">-->
-        <audio autoplay="autopaly">
-        <source src="music/love.mp3" type="audio/mp3" />
-    </audio>
-    <div id="main">
-        <div id="wrap">
-            <div id="text">
-                <div id="code">
-                    <font color="#FF0000">
+<audio autoplay="autopaly">
+    <source src="music/love.mp3" type="audio/mp3"/>
+</audio>
+<div id="main">
+    <div id="wrap">
+        <div id="text">
+            <div id="code">
+                <font color="#FF0000">
                         <span class="say">
                             <h1>LZH&LJT</h1>
                         </span><br><br>
-                        <span style="font-size:22px;color:#800080" class="say">生死契阔，与子成说。</span><br>
-                        <span style="font-size:22px;color:#800080" class="say">执子之手，与子偕老。</span><br>
-                        <span style="font-size:26px;color:#808080" class="say">往后余生：</span><br>
-                        <span style="font-size:22px;color:#800080" class="say">忠于感情，忠于岁月;</span><br>
-                        <span style="font-size:22px;color:#800080" class="say">忠于责任，忠于圆满;</span><br>
-                        <span style="font-size:22px;color:#800080" class="say">钟情于你，忠诚于你;</span><br>
-                        <span style="font-size:22px;color:#800080" class="say">忠心于你，终止于你。</span><br>
-                        <span style="font-size:22px;color:#800080" class="say">我愿爱你守护你直到永远！</span><br><br>
-                        <span style="font-size:20px;color:#800080" class="say"><span
-                                class="space"></span>-----Yours  LZH</span><br>
-                        <!--<span class="say"><h1>生日快乐!</h1></span><br>-->
-                    </font>
-                </div>
+                    <span style="font-size:22px;color:#800080" class="say">生死契阔，与子成说。</span><br>
+                    <span style="font-size:22px;color:#800080" class="say">执子之手，与子偕老。</span><br>
+                    <span style="font-size:26px;color:#808080" class="say">往后余生：</span><br>
+                    <span style="font-size:22px;color:#800080" class="say">忠于感情，忠于岁月;</span><br>
+                    <span style="font-size:22px;color:#800080" class="say">忠于责任，忠于圆满;</span><br>
+                    <span style="font-size:22px;color:#800080" class="say">钟情于你，忠诚于你;</span><br>
+                    <span style="font-size:22px;color:#800080" class="say">忠心于你，终止于你。</span><br>
+                    <span style="font-size:22px;color:#800080" class="say">我愿爱你守护你直到永远！</span><br><br>
+                    <span style="font-size:20px;color:#800080" class="say"><span
+                            class="space"></span>-----Yours  LZH</span><br>
+                    <!--<span class="say"><h1>生日快乐!</h1></span><br>-->
+                </font>
             </div>
-            <div id="clock-box">
-                <span class="STYLE1"></span>
-                <font color="#33CC00">LJT@LZH在一起</font>
-                <span class="STYLE1">已经：</span>
-                <span class="STYLE1"></span>
-                <font color="#33CC00"></font>
-                <span class="STYLE1"></span>
-                <div id="clock"></div>
-            </div>
-            <canvas id="canvas" width="1100" height="680"></canvas>
         </div>
-
+        <div id="clock-box">
+            <span class="STYLE1"></span>
+            <font color="#33CC00">LJT@LZH在一起</font>
+            <span class="STYLE1">已经：</span>
+            <span class="STYLE1"></span>
+            <font color="#33CC00"></font>
+            <span class="STYLE1"></span>
+            <div id="clock"></div>
+        </div>
+        <canvas id="canvas" width="1100" height="680"></canvas>
     </div>
 
+</div>
 
-    <div class="one">
-        <ul>
-            <li><a href="javascript:;"><img src="images/a1.jpg" alt=""><span>我是佳桐</span></a></li>
-            <li><a href="javascript:;"><img src="images/a2.jpg" alt=""><span>我真好看</span></a></li>
-            <li><a href="javascript:;"><img src="images/a3.jpg" alt=""><span>快夸我好看</span></a></li>
-            <li><a href="javascript:;"><img src="images/a4.jpg" alt=""><span>hi~hi！</span></a></li>
-            <li><a href="javascript:;"><img src="images/a5.jpg" alt=""><span>今天我生日</span></a></li>
-            <li><a href="javascript:;"><img src="images/a6.jpg" alt=""><span>生日快乐啊</span></a></li>
-            <li><a href="javascript:;"><img src="images/a7.jpg" alt=""><span>单身汪</span></a></li>
-            <li><a href="javascript:;"><img src="images/a8.jpg" alt=""><span>😕</span></a></li>
-            <li><a href="javascript:;"><img src="images/a9.jpg" alt=""><span>生日快乐</span></a></li>
-            <li><a href="javascript:;"><img src="images/a10.jpg" alt=""><span> hi hi</span></a></li>
-            <li><a href="javascript:;"><img src="images/a11.jpg" alt=""><span>😗😘</span></a></li>
-            <li><a href="javascript:;"><img src="images/a12.jpg" alt=""><span>生日快乐</span></a></li>
-            <li><a href="javascript:;"><img src="images/a13.jpg" alt=""><span>汪汪汪</span></a></li>
-            <li><a href="javascript:;"><img src="images/a14.jpg" alt=""><span>生日快乐！</span></a></li>
-            <li><a href="javascript:;"><img src="images/a15.jpg" alt=""><span>😀</span></a></li>
-            <li><a href="javascript:;"><img src="images/a16.jpg" alt=""><span>LOVE</span></a></li>
-            <li><a href="javascript:;"><img src="images/a17.jpg" alt=""><span>最爱佳桐</span></a></li>
-            <li><a href="javascript:;"><img src="images/a18.jpg" alt=""><span>生日快乐</span></a></li>
-            <li><a href="javascript:;"><img src="images/a19.jpg" alt=""><span>😕</span></a></li>
-            <li><a href="javascript:;"><img src="images/a20.jpg" alt=""><span>生日快乐</span></a></li>
-            <li><a href="javascript:;"><img src="images/a21.jpg" alt=""><span>hi hi</span></a></li>
-            <li><a href="javascript:;"><img src="images/a22.jpg" alt=""><span>生日快乐</span></a></li>
-            <li><a href="javascript:;"><img src="images/a23.jpg" alt=""><span>😘</span></a></li>
-            <li><a href="javascript:;"><img src="images/a24.jpg" alt=""><span>爱你吖</span></a></li>
-            <li><a href="javascript:;"><img src="images/a25.jpg" alt=""><span>仙女下凡</span></a></li>
-            <li><a href="javascript:;"><img src="images/a26.jpg" alt=""><span>生日快乐！</span></a></li>
-            <li><a href="javascript:;"><img src="images/a27.jpg" alt=""><span>😊o(*￣▽￣*)ブ😊</span></a></li>
-            <li><a href="javascript:;"><img src="images/a28.jpg" alt=""><span>😘</span></a></li>
-            <li><a href="javascript:;"><img src="images/a29.jpg" alt=""><span>爱你吖</span></a></li>
-            <li><a href="javascript:;"><img src="images/a30.jpg" alt=""><span>仙女下凡</span></a></li>
-            <li><a href="javascript:;"><img src="images/a31.jpg" alt=""><span>最爱佳桐</span></a></li>
-        </ul>
-    </div>
-    <div class="one">
-        <ul>
-            <li><a href="javascript:;"><img src="images/c1.jpg" alt=""><span>我是佳桐</span></a></li>
-            <li><a href="javascript:;"><img src="images/c2.jpg" alt=""><span>我真好看</span></a></li>
-            <li><a href="javascript:;"><img src="images/c3.jpg" alt=""><span>看我</span></a></li>
-            <li><a href="javascript:;"><img src="images/c4.jpg" alt=""><span>hi~hi！</span></a></li>
-            <li><a href="javascript:;"><img src="images/c5.jpg" alt=""><span>鹅鹅鹅</span></a></li>
-            <li><a href="javascript:;"><img src="images/c6.jpg" alt=""><span>哇喔</span></a></li>
-            <li><a href="javascript:;"><img src="images/c7.jpg" alt=""><span>单身汪</span></a></li>
-            <li><a href="javascript:;"><img src="images/c8.jpg" alt=""><span>😕</span></a></li>
-            <li><a href="javascript:;"><img src="images/c9.jpg" alt=""><span>生日快乐</span></a></li>
-            <li><a href="javascript:;"><img src="images/c10.jpg" alt=""><span> hi hi</span></a></li>
-            <li><a href="javascript:;"><img src="images/c11.jpg" alt=""><span>😗😘</span></a></li>
-            <li><a href="javascript:;"><img src="images/c12.jpg" alt=""><span>生日快乐</span></a></li>
-            <li><a href="javascript:;"><img src="images/c13.jpg" alt=""><span>汪汪汪</span></a></li>
-            <li><a href="javascript:;"><img src="images/c14.jpg" alt=""><span>开心！</span></a></li>
-            <li><a href="javascript:;"><img src="images/c15.jpg" alt=""><span>😀</span></a></li>
-            <li><a href="javascript:;"><img src="images/c16.jpg" alt=""><span>LOVE</span></a></li>
-            <li><a href="javascript:;"><img src="images/c17.jpg" alt=""><span>😕</span></a></li>
-            <li><a href="javascript:;"><img src="images/c18.jpg" alt=""><span>吼吼</span></a></li>
-            <li><a href="javascript:;"><img src="images/c19.jpg" alt=""><span> hi hi</span></a></li>
-            <li><a href="javascript:;"><img src="images/c20.jpg" alt=""><span>😗😘</span></a></li>
-            <li><a href="javascript:;"><img src="images/c21.jpg" alt=""><span>吼吼哈嘿</span></a></li>
-            <li><a href="javascript:;"><img src="images/c22.jpg" alt=""><span>汪汪汪</span></a></li>
-        </ul>
-    </div>
 
-    <script>
-        // /* 有的浏览器第一次加载不会动画  刷新当前页面一次 可以不加的*/
-        //  function reurl(){
-        //      url = location.href;var times = url.split("?");
-        //     if(times[1] != 1){url += "?1"; self.location.replace(url);}
-        // }
-        // onload=reurl ;
-        // /* 有的浏览器第一次加载不会动画  刷新当前页面一次 */
+<div class="one">
+    <ul>
+        <li><a href="javascript:;"><img src="images/a1.jpg" alt=""><span>我是佳桐</span></a></li>
+        <li><a href="javascript:;"><img src="images/a2.jpg" alt=""><span>我真好看</span></a></li>
+        <li><a href="javascript:;"><img src="images/a3.jpg" alt=""><span>快夸我好看</span></a></li>
+        <li><a href="javascript:;"><img src="images/a4.jpg" alt=""><span>hi~hi！</span></a></li>
+        <li><a href="javascript:;"><img src="images/a5.jpg" alt=""><span>今天我生日</span></a></li>
+        <li><a href="javascript:;"><img src="images/a6.jpg" alt=""><span>生日快乐啊</span></a></li>
+        <li><a href="javascript:;"><img src="images/a7.jpg" alt=""><span>单身汪</span></a></li>
+        <li><a href="javascript:;"><img src="images/a8.jpg" alt=""><span>😕</span></a></li>
+        <li><a href="javascript:;"><img src="images/a9.jpg" alt=""><span>生日快乐</span></a></li>
+        <li><a href="javascript:;"><img src="images/a10.jpg" alt=""><span> hi hi</span></a></li>
+        <li><a href="javascript:;"><img src="images/a11.jpg" alt=""><span>😗😘</span></a></li>
+        <li><a href="javascript:;"><img src="images/a12.jpg" alt=""><span>生日快乐</span></a></li>
+        <li><a href="javascript:;"><img src="images/a13.jpg" alt=""><span>汪汪汪</span></a></li>
+        <li><a href="javascript:;"><img src="images/a14.jpg" alt=""><span>生日快乐！</span></a></li>
+        <li><a href="javascript:;"><img src="images/a15.jpg" alt=""><span>😀</span></a></li>
+        <li><a href="javascript:;"><img src="images/a16.jpg" alt=""><span>LOVE</span></a></li>
+        <li><a href="javascript:;"><img src="images/a17.jpg" alt=""><span>最爱佳桐</span></a></li>
+        <li><a href="javascript:;"><img src="images/a18.jpg" alt=""><span>生日快乐</span></a></li>
+        <li><a href="javascript:;"><img src="images/a19.jpg" alt=""><span>😕</span></a></li>
+        <li><a href="javascript:;"><img src="images/a20.jpg" alt=""><span>生日快乐</span></a></li>
+        <li><a href="javascript:;"><img src="images/a21.jpg" alt=""><span>hi hi</span></a></li>
+        <li><a href="javascript:;"><img src="images/a22.jpg" alt=""><span>生日快乐</span></a></li>
+        <li><a href="javascript:;"><img src="images/a23.jpg" alt=""><span>😘</span></a></li>
+        <li><a href="javascript:;"><img src="images/a24.jpg" alt=""><span>爱你吖</span></a></li>
+        <li><a href="javascript:;"><img src="images/a25.jpg" alt=""><span>仙女下凡</span></a></li>
+        <li><a href="javascript:;"><img src="images/a26.jpg" alt=""><span>生日快乐！</span></a></li>
+        <li><a href="javascript:;"><img src="images/a27.jpg" alt=""><span>😊o(*￣▽￣*)ブ😊</span></a></li>
+        <li><a href="javascript:;"><img src="images/a28.jpg" alt=""><span>😘</span></a></li>
+        <li><a href="javascript:;"><img src="images/a29.jpg" alt=""><span>爱你吖</span></a></li>
+        <li><a href="javascript:;"><img src="images/a30.jpg" alt=""><span>仙女下凡</span></a></li>
+        <li><a href="javascript:;"><img src="images/a31.jpg" alt=""><span>最爱佳桐</span></a></li>
+    </ul>
+</div>
+<div class="one">
+    <ul>
+        <li><a href="javascript:;"><img src="images/c1.jpg" alt=""><span>我是佳桐</span></a></li>
+        <li><a href="javascript:;"><img src="images/c2.jpg" alt=""><span>我真好看</span></a></li>
+        <li><a href="javascript:;"><img src="images/c3.jpg" alt=""><span>看我</span></a></li>
+        <li><a href="javascript:;"><img src="images/c4.jpg" alt=""><span>hi~hi！</span></a></li>
+        <li><a href="javascript:;"><img src="images/c5.jpg" alt=""><span>鹅鹅鹅</span></a></li>
+        <li><a href="javascript:;"><img src="images/c6.jpg" alt=""><span>哇喔</span></a></li>
+        <li><a href="javascript:;"><img src="images/c7.jpg" alt=""><span>单身汪</span></a></li>
+        <li><a href="javascript:;"><img src="images/c8.jpg" alt=""><span>😕</span></a></li>
+        <li><a href="javascript:;"><img src="images/c9.jpg" alt=""><span>生日快乐</span></a></li>
+        <li><a href="javascript:;"><img src="images/c10.jpg" alt=""><span> hi hi</span></a></li>
+        <li><a href="javascript:;"><img src="images/c11.jpg" alt=""><span>😗😘</span></a></li>
+        <li><a href="javascript:;"><img src="images/c12.jpg" alt=""><span>生日快乐</span></a></li>
+        <li><a href="javascript:;"><img src="images/c13.jpg" alt=""><span>汪汪汪</span></a></li>
+        <li><a href="javascript:;"><img src="images/c14.jpg" alt=""><span>开心！</span></a></li>
+        <li><a href="javascript:;"><img src="images/c15.jpg" alt=""><span>😀</span></a></li>
+        <li><a href="javascript:;"><img src="images/c16.jpg" alt=""><span>LOVE</span></a></li>
+        <li><a href="javascript:;"><img src="images/c17.jpg" alt=""><span>😕</span></a></li>
+        <li><a href="javascript:;"><img src="images/c18.jpg" alt=""><span>吼吼</span></a></li>
+        <li><a href="javascript:;"><img src="images/c19.jpg" alt=""><span> hi hi</span></a></li>
+        <li><a href="javascript:;"><img src="images/c20.jpg" alt=""><span>😗😘</span></a></li>
+        <li><a href="javascript:;"><img src="images/c21.jpg" alt=""><span>吼吼哈嘿</span></a></li>
+        <li><a href="javascript:;"><img src="images/c22.jpg" alt=""><span>汪汪汪</span></a></li>
+    </ul>
+</div>
 
-        $(document).ready(function () {
-            var box0 = $(".one"),v0 = 1.5; //这里添加滚动的对象和其速率
-            var box1 = $(".two"),v1 = 1;
-            Rin(box0,v0);
-            Rin(box1,v1);
+<script>
+    // /* 有的浏览器第一次加载不会动画  刷新当前页面一次 可以不加的*/
+    //  function reurl(){
+    //      url = location.href;var times = url.split("?");
+    //     if(times[1] != 1){url += "?1"; self.location.replace(url);}
+    // }
+    // onload=reurl ;
+    // /* 有的浏览器第一次加载不会动画  刷新当前页面一次 */
 
-            function Rin($Box,v){//$Box移动的对象，v对象移动的速率
-                var $Box_ul = $Box.find("ul"),
-                    $Box_li = $Box_ul.find("li"),
-                    $Box_li_span = $Box_li.find("span"),
-                    left = 0,
-                    s=0,
-                    timer;//定时器
+    $(document).ready(function () {
+        var box0 = $(".one"), v0 = 1.5; //这里添加滚动的对象和其速率
+        var box1 = $(".two"), v1 = 1;
+        Rin(box0, v0);
+        Rin(box1, v1);
 
-                $Box_li.each(function(index){
-                    $($Box_li_span[index]).width($(this).width());//hover
-                    s += $(this).outerWidth(true); //即要滚动的长度
-                })
+        function Rin($Box, v) {//$Box移动的对象，v对象移动的速率
+            var $Box_ul = $Box.find("ul"),
+                $Box_li = $Box_ul.find("li"),
+                $Box_li_span = $Box_li.find("span"),
+                left = 0,
+                s = 0,
+                timer;//定时器
 
-                window.requestAnimationFrame = window.requestAnimationFrame||function(Tmove){return setTimeout(Tmove,1000/60)};
-                window.cancelAnimationFrame = window.cancelAnimationFrame||clearTimeout;
+            $Box_li.each(function (index) {
+                $($Box_li_span[index]).width($(this).width());//hover
+                s += $(this).outerWidth(true); //即要滚动的长度
+            })
 
-                if( s>=$Box.width()){//如果滚动长度超出Box长度即开始滚动，没有的话就不执行滚动
-                    $Box_li.clone(true).appendTo($Box_ul);
-                    Tmove();
-                    function Tmove(){
-                        //运动是移动left  从0到-s;（个人习惯往左滚）
-                        left -= v;
-                        if(left <= -s){left = 0;$Box_ul.css("left",left)}else{ $Box_ul.css("left",left) }
-                        timer = requestAnimationFrame(Tmove);
+            window.requestAnimationFrame = window.requestAnimationFrame || function (Tmove) {
+                return setTimeout(Tmove, 1000 / 60)
+            };
+            window.cancelAnimationFrame = window.cancelAnimationFrame || clearTimeout;
+
+            if (s >= $Box.width()) {//如果滚动长度超出Box长度即开始滚动，没有的话就不执行滚动
+                $Box_li.clone(true).appendTo($Box_ul);
+                Tmove();
+
+                function Tmove() {
+                    //运动是移动left  从0到-s;（个人习惯往左滚）
+                    left -= v;
+                    if (left <= -s) {
+                        left = 0;
+                        $Box_ul.css("left", left)
+                    } else {
+                        $Box_ul.css("left", left)
                     }
-                    $Box_ul.hover(function(){cancelAnimationFrame(timer)},function(){Tmove()})
+                    timer = requestAnimationFrame(Tmove);
                 }
 
-            }
-        })
-    </script>
-
-
-
-    <script>
-    </script>
-
-    <script>
-        (function () {
-            var canvas = $('#canvas');
-
-            if (!canvas[0].getContext) {
-                $("#error").show();
-                return false;
+                $Box_ul.hover(function () {
+                    cancelAnimationFrame(timer)
+                }, function () {
+                    Tmove()
+                })
             }
 
-            var width = canvas.width();
-            var height = canvas.height();
-            canvas.attr("width", width);
-            canvas.attr("height", height);
-            var opts = {
-                seed: {
-                    x: width / 2 - 20,
-                    color: "rgb(190, 26, 37)",
-                    scale: 2
-                },
-                branch: [
-                    [535, 680, 570, 250, 500, 200, 30, 100, [
-                        [540, 500, 455, 417, 340, 400, 13, 100, [
-                            [450, 435, 434, 430, 394, 395, 2, 40]
-                        ]],
-                        [550, 445, 600, 356, 680, 345, 12, 100, [
-                            [578, 400, 648, 409, 661, 426, 3, 80]
-                        ]],
-                        [539, 281, 537, 248, 534, 217, 3, 40],
-                        [546, 397, 413, 247, 328, 244, 9, 80, [
-                            [427, 286, 383, 253, 371, 205, 2, 40],
-                            [498, 345, 435, 315, 395, 330, 4, 60]
-                        ]],
-                        [546, 357, 608, 252, 678, 221, 6, 100, [
-                            [590, 293, 646, 277, 648, 271, 2, 80]
-                        ]]
+        }
+    })
+</script>
+
+
+<script>
+</script>
+
+<script>
+    (function () {
+        var canvas = $('#canvas');
+
+        if (!canvas[0].getContext) {
+            $("#error").show();
+            return false;
+        }
+
+        var width = canvas.width();
+        var height = canvas.height();
+        canvas.attr("width", width);
+        canvas.attr("height", height);
+        var opts = {
+            seed: {
+                x: width / 2 - 20,
+                color: "rgb(190, 26, 37)",
+                scale: 2
+            },
+            branch: [
+                [535, 680, 570, 250, 500, 200, 30, 100, [
+                    [540, 500, 455, 417, 340, 400, 13, 100, [
+                        [450, 435, 434, 430, 394, 395, 2, 40]
+                    ]],
+                    [550, 445, 600, 356, 680, 345, 12, 100, [
+                        [578, 400, 648, 409, 661, 426, 3, 80]
+                    ]],
+                    [539, 281, 537, 248, 534, 217, 3, 40],
+                    [546, 397, 413, 247, 328, 244, 9, 80, [
+                        [427, 286, 383, 253, 371, 205, 2, 40],
+                        [498, 345, 435, 315, 395, 330, 4, 60]
+                    ]],
+                    [546, 357, 608, 252, 678, 221, 6, 100, [
+                        [590, 293, 646, 277, 648, 271, 2, 80]
                     ]]
-                ],
-                bloom: {
-                    num: 700,
-                    width: 1080,
-                    height: 650,
-                },
-                footer: {
-                    width: 1200,
-                    height: 5,
-                    speed: 10,
-                }
+                ]]
+            ],
+            bloom: {
+                num: 700,
+                width: 1080,
+                height: 650,
+            },
+            footer: {
+                width: 1200,
+                height: 5,
+                speed: 10,
             }
+        }
 
-            var tree = new Tree(canvas[0], width, height, opts);
-            var seed = tree.seed;
-            var foot = tree.footer;
-            var hold = 1;
+        var tree = new Tree(canvas[0], width, height, opts);
+        var seed = tree.seed;
+        var foot = tree.footer;
+        var hold = 1;
 
-            canvas.click(function (e) {
-                var offset = canvas.offset(),
-                    x, y;
-                x = e.pageX - offset.left;
-                y = e.pageY - offset.top;
-                if (seed.hover(x, y)) {
-                    hold = 0;
-                    canvas.unbind("click");
-                    canvas.unbind("mousemove");
-                    canvas.removeClass('hand');
-                }
-            }).mousemove(function (e) {
-                var offset = canvas.offset(),
-                    x, y;
-                x = e.pageX - offset.left;
-                y = e.pageY - offset.top;
-                canvas.toggleClass('hand', seed.hover(x, y));
-            });
+        canvas.click(function (e) {
+            var offset = canvas.offset(),
+                x, y;
+            x = e.pageX - offset.left;
+            y = e.pageY - offset.top;
+            if (seed.hover(x, y)) {
+                hold = 0;
+                canvas.unbind("click");
+                canvas.unbind("mousemove");
+                canvas.removeClass('hand');
+            }
+        }).mousemove(function (e) {
+            var offset = canvas.offset(),
+                x, y;
+            x = e.pageX - offset.left;
+            y = e.pageY - offset.top;
+            canvas.toggleClass('hand', seed.hover(x, y));
+        });
 
-            var seedAnimate = eval(Jscex.compile("async", function () {
-                seed.draw();
-                while (hold) {
-                    $await(Jscex.Async.sleep(10));
-                }
-                while (seed.canScale()) {
-                    seed.scale(0.95);
-                    $await(Jscex.Async.sleep(10));
-                }
-                while (seed.canMove()) {
-                    seed.move(0, 2);
-                    foot.draw();
-                    $await(Jscex.Async.sleep(10));
-                }
-            }));
-
-            var growAnimate = eval(Jscex.compile("async", function () {
-                do {
-                    tree.grow();
-                    $await(Jscex.Async.sleep(10));
-                } while (tree.canGrow());
-            }));
-
-            var flowAnimate = eval(Jscex.compile("async", function () {
-                do {
-                    tree.flower(2);
-                    $await(Jscex.Async.sleep(10));
-                } while (tree.canFlower());
-            }));
-
-            var moveAnimate = eval(Jscex.compile("async", function () {
-                tree.snapshot("p1", 240, 0, 610, 680);
-                while (tree.move("p1", 500, 0)) {
-                    foot.draw();
-                    $await(Jscex.Async.sleep(10));
-                }
+        var seedAnimate = eval(Jscex.compile("async", function () {
+            seed.draw();
+            while (hold) {
+                $await(Jscex.Async.sleep(10));
+            }
+            while (seed.canScale()) {
+                seed.scale(0.95);
+                $await(Jscex.Async.sleep(10));
+            }
+            while (seed.canMove()) {
+                seed.move(0, 2);
                 foot.draw();
-                tree.snapshot("p2", 500, 0, 610, 680);
+                $await(Jscex.Async.sleep(10));
+            }
+        }));
 
-                // 会有闪烁不得意这样做, (＞﹏＜)
-                canvas.parent().css("background", "url(" + tree.toDataURL('image/png') + ")");
-                canvas.css("background", "#fff");
-                $await(Jscex.Async.sleep(-1));
-                canvas.css("background", "none");
-            }));
+        var growAnimate = eval(Jscex.compile("async", function () {
+            do {
+                tree.grow();
+                $await(Jscex.Async.sleep(10));
+            } while (tree.canGrow());
+        }));
 
-            var jumpAnimate = eval(Jscex.compile("async", function () {
-                var ctx = tree.ctx;
-                while (true) {
-                    tree.ctx.clearRect(0, 0, width, height);
-                    tree.jump();
-                    foot.draw();
-                    $await(Jscex.Async.sleep(25));
-                }
-            }));
+        var flowAnimate = eval(Jscex.compile("async", function () {
+            do {
+                tree.flower(2);
+                $await(Jscex.Async.sleep(10));
+            } while (tree.canFlower());
+        }));
 
-            var textAnimate = eval(Jscex.compile("async", function () {
-                var together = new Date();
-                together.setFullYear(2018, 2, 5); //时间年月日
-                together.setHours(13); //小时
-                together.setMinutes(59); //分钟
-                together.setSeconds(5); //秒前一位
-                together.setMilliseconds(9); //秒第二位
+        var moveAnimate = eval(Jscex.compile("async", function () {
+            tree.snapshot("p1", 240, 0, 610, 680);
+            while (tree.move("p1", 500, 0)) {
+                foot.draw();
+                $await(Jscex.Async.sleep(10));
+            }
+            foot.draw();
+            tree.snapshot("p2", 500, 0, 610, 680);
 
-                $("#code").show().typewriter();
-                $("#clock-box").fadeIn(500);
-                while (true) {
-                    timeElapse(together);
-                    $await(Jscex.Async.sleep(1000));
-                }
-            }));
+            // 会有闪烁不得意这样做, (＞﹏＜)
+            canvas.parent().css("background", "url(" + tree.toDataURL('image/png') + ")");
+            canvas.css("background", "#fff");
+            $await(Jscex.Async.sleep(-1));
+            canvas.css("background", "none");
+        }));
 
-            var runAsync = eval(Jscex.compile("async", function () {
-                $await(seedAnimate());
-                $await(growAnimate());
-                $await(flowAnimate());
-                $await(moveAnimate());
+        var jumpAnimate = eval(Jscex.compile("async", function () {
+            var ctx = tree.ctx;
+            while (true) {
+                tree.ctx.clearRect(0, 0, width, height);
+                tree.jump();
+                foot.draw();
+                $await(Jscex.Async.sleep(25));
+            }
+        }));
 
-                textAnimate().start();
+        var textAnimate = eval(Jscex.compile("async", function () {
+            var together = new Date();
+            together.setFullYear(2018, 2, 5); //时间年月日
+            together.setHours(13); //小时
+            together.setMinutes(59); //分钟
+            together.setSeconds(5); //秒前一位
+            together.setMilliseconds(9); //秒第二位
 
-                $await(jumpAnimate());
-            }));
+            $("#code").show().typewriter();
+            $("#clock-box").fadeIn(500);
+            while (true) {
+                timeElapse(together);
+                $await(Jscex.Async.sleep(1000));
+            }
+        }));
 
-            runAsync().start();
-        })();
-    </script>
-    <!---------------网站背景特效--------------->
-    <style type="text/css">
-        #cas {
-            position: fixed;
-            top: 0;
-            left: 0;
-            z-index: -2;
-            opacity: .5
-        }
-        #c {
-            position: fixed;
-            top: 0;
-            left: 0;
-            z-index: -2;
-            opacity: .5
-        }
+        var runAsync = eval(Jscex.compile("async", function () {
+            $await(seedAnimate());
+            $await(growAnimate());
+            $await(flowAnimate());
+            $await(moveAnimate());
 
-        .vm img {
-            margin-top: 0 !important;
-        }
-    </style>
+            textAnimate().start();
 
-    <canvas id="cas" width="100%" height="100%"></canvas>
-    <script type="text/javascript" src="./css/4a.js"></script>
-    <canvas id="c" width="100%" height="100%"></canvas>
-    <script type="text/javascript" src="./css/pop.js"></script>
+            $await(jumpAnimate());
+        }));
+
+        runAsync().start();
+    })();
+</script>
+<!---------------网站背景特效--------------->
+<style type="text/css">
+    #cas {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: -2;
+        opacity: .5
+    }
+
+    #c {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: -2;
+        opacity: .5
+    }
+
+    .vm img {
+        margin-top: 0 !important;
+    }
+</style>
+
+<canvas id="cas" width="100%" height="100%"></canvas>
+<script type="text/javascript" src="./css/4a.js"></script>
+<canvas id="c" width="100%" height="100%"></canvas>
+<script type="text/javascript" src="./css/pop.js"></script>
 
 
 </body>
